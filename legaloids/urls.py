@@ -15,4 +15,6 @@ urlpatterns = [
     path('singleblog/',singleblog),
     path('study/',study),
     path('adminpannel/',adminpannel),
+    path('postblog/',postblog),
+    path('allblogs/',allblogs),
 ]

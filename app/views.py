@@ -20,3 +20,7 @@ def study(request):
 	return render(request,'study.html',{})
 def adminpannel(request):
 	return render(request,'adminpannel.html',{})
+def postblog(request):
+	return render(request,'postblog.html',{})
+def allblogs(request):
+	return render(request,'allblogs.html',{})
