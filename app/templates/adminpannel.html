@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Legaloids - Admin Pannel</title>
+		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
+		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="{% static 'admin/favicon.ico' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/normalize.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/demo.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/component.css' %}" />
+		<script src="{% static 'admin/js/modernizr.custom.js' %}"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li><a class="gn-icon gn-icon-article">Post Blog</a></li>
+								<li><a class="gn-icon"><i style="margin-left:20px;margin-right:20px;" class="fa fa-th"></i> All Blogs List</a></li>
+								<li><a class="gn-icon"><i style="margin-left:20px;margin-right:20px;" class="fa fa-line-chart"></i>Analysis</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Logout</span></a></li>
+			</ul>
+			<header>
+				<h2>Hi there,</h2>
+				<h1>Legaloids Admin Pannel</h1>	
+			</header> 
+		</div><!-- /container -->
+		<script src="{% static 'admin/js/classie.js' %}"></script>
+		<script src="{% static 'admin/js/gnmenu.js' %}"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
+</html>

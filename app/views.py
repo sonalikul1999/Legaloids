@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
 def about(request):
 	return render(request,'about.html',{})
 def blog(request):
@@ -19,3 +18,5 @@ def singleblog(request):
 	return render(request,'single-blog.html',{})
 def study(request):
 	return render(request,'study.html',{})
+def adminpannel(request):
+	return render(request,'adminpannel.html',{})
