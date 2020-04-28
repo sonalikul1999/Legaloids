@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Legaloids - Admin Pannel</title>
+		<title>Legaloids - Error</title>
 		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
 		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
 		<meta name="author" content="Codrops" />
@@ -17,42 +17,16 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'w3.css' %}" />
 		<script src="{% static 'admin/js/modernizr.custom.js' %}"></script>
 	</head>
-	<body style="background-color:grey;">
+	<body style="background-color:red;">
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
 				<li class="gn-trigger">
-					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-					<nav class="gn-menu-wrapper">
-						<div class="gn-scroller">
-							<ul class="gn-menu">
-								<li><a class="gn-icon gn-icon-article" href="/postblog/">Post Blog</a></li>
-								<li><a class="gn-icon" href="/allblogs/"><i style="margin-left:20px;margin-right:20px;" class="fa fa-th"></i> All Blogs List</a></li>
-								<li><a class="gn-icon" href=""><i style="margin-left:20px;margin-right:20px;" class="fa fa-line-chart"></i>Analysis</a></li>
-						</div><!-- /gn-scroller -->
-					</nav>
 				</li>
-				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Logout</span></a></li>
 			</ul>
-			<div style="margin-left:400px;margin-top:100px;margin-right:50px;background-color:white;border-radius:15px;"class="w3-card-4">
-			<table class="w3-table-all w3-hoverable">
-				<tr class="w3-black">
-					<th>Blog Id</th>
-					<th>Blog Title</th>
-					<th>Blog Body</th>
-					<th>Blog Category</th>
-					<th>Blog Photo</th>
-				</tr>
-				<tr>
-					<td>B002</td>
-					<td>Crime</td>
-					<td>ABC</td>
-					<td>XYZ</td>
-					<td>vg</td>
-				</tr>
-
-				
-			</table>
-			</div>
+			<header>
+				<h2><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR</h2>
+				<h1>404 NOT FOUND <i class="fa fa-exclamation" aria-hidden="true"></i></h1>	
+			</header> 
 		</div><!-- /container -->
 		<script src="{% static 'admin/js/classie.js' %}"></script>
 		<script src="{% static 'admin/js/gnmenu.js' %}"></script>

@@ -17,41 +17,24 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'w3.css' %}" />
 		<script src="{% static 'admin/js/modernizr.custom.js' %}"></script>
 	</head>
-	<body style="background-color:grey;">
+	<body style="background-color:white;">
 		<div class="container">
-			<ul id="gn-menu" class="gn-menu-main">
-				<li class="gn-trigger">
-					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-					<nav class="gn-menu-wrapper">
-						<div class="gn-scroller">
-							<ul class="gn-menu">
-								<li><a class="gn-icon gn-icon-article" href="/postblog/">Post Blog</a></li>
-								<li><a class="gn-icon" href="/allblogs/"><i style="margin-left:20px;margin-right:20px;" class="fa fa-th"></i> All Blogs List</a></li>
-								<li><a class="gn-icon" href=""><i style="margin-left:20px;margin-right:20px;" class="fa fa-line-chart"></i>Analysis</a></li>
-						</div><!-- /gn-scroller -->
-					</nav>
-				</li>
-				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Logout</span></a></li>
+			<ul id="gn-menu" class="gn-menu-main w3-blue">
 			</ul>
-			<div style="margin-left:400px;margin-top:100px;margin-right:50px;background-color:white;border-radius:15px;"class="w3-card-4">
-			<table class="w3-table-all w3-hoverable">
-				<tr class="w3-black">
-					<th>Blog Id</th>
-					<th>Blog Title</th>
-					<th>Blog Body</th>
-					<th>Blog Category</th>
-					<th>Blog Photo</th>
-				</tr>
-				<tr>
-					<td>B002</td>
-					<td>Crime</td>
-					<td>ABC</td>
-					<td>XYZ</td>
-					<td>vg</td>
-				</tr>
+			<div class="w3-card-4" style="margin-right:400px;margin-left:400px;margin-top:150px;background-color:white;border-radius:15px;">
+				<div class="w3-container w3-black">
+				  <h2>Legaloids Admin Login</h2>
+				</div>
+				<center>
+				<form class="w3-container" style="padding:20px;" action="/adminpannel/" method="POST">
 
-				
-			</table>
+				  <input style="margin-bottom:20px;" name="email" placeholder="Admin Email" class="w3-input w3-border w3-light-grey" type="email">
+
+				  <input style="margin-bottom:20px;" name="pass" placeholder="Admin Password" class="w3-input w3-border w3-light-grey" type="password">
+
+				  <button class="w3-btn w3-blue w3-hover-black" style="border-radius:15px;font-size:18px;">Login</button>
+				</form>
+				</center>
 			</div>
 		</div><!-- /container -->
 		<script src="{% static 'admin/js/classie.js' %}"></script>
