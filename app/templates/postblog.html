@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/normalize.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/demo.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/component.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'w3.css' %}" />
 		<script src="{% static 'admin/js/modernizr.custom.js' %}"></script>
 	</head>
 	<body style="background-color:black;">
@@ -27,16 +28,28 @@
 								<li><a class="gn-icon gn-icon-article" href="/postblog/">Post Blog</a></li>
 								<li><a class="gn-icon" href="/allblogs/"><i style="margin-left:20px;margin-right:20px;" class="fa fa-th"></i> All Blogs List</a></li>
 								<li><a class="gn-icon" href=""><i style="margin-left:20px;margin-right:20px;" class="fa fa-line-chart"></i>Analysis</a></li>
+								<li><a class="gn-icon" href=""><i style="margin-left:20px;margin-right:20px;" class="fa fa-lock"></i> Logout</a></li>
 							</ul>
 						</div><!-- /gn-scroller -->
 					</nav>
 				</li>
-				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Logout</span></a></li>
+				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Back</span></a></li>
 			</ul>
-			<header>
-				<h2>Hi there,</h2>
-				<h1>Legaloids Admin Pannel</h1>	
-			</header> 
+			<div style="margin-left:400px;margin-top:100px;margin-right:50px;background-color:white;border-radius:15px;"class="w3-card-4">
+			<div class="w3-container w3-blue">
+			  <h2>Post Blog</h2>
+			</div>
+
+			<form style="padding-right:20px;padding-left:20px;padding-bottom:20px;padding-top:20px;"class="w3-container">
+			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Title" name="title" type="text">
+
+			  <textarea style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Body" name="body" type="text"></textarea>
+			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Category" name="category" type="text">
+			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Photo" name="image" type="file">
+
+
+			  <button style="font-size:18px;border-radius:15px;padding:10px;" class="w3-black w3-hover-blue">Post Blog</button>
+			</form></div>
 		</div><!-- /container -->
 		<script src="{% static 'admin/js/classie.js' %}"></script>
 		<script src="{% static 'admin/js/gnmenu.js' %}"></script>

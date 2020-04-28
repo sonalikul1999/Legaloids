@@ -14,9 +14,10 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/normalize.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/demo.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'admin/css/component.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'w3.css' %}" />
 		<script src="{% static 'admin/js/modernizr.custom.js' %}"></script>
 	</head>
-	<body style="background-color:black;">
+	<body style="background-color:grey;">
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
 				<li class="gn-trigger">
@@ -27,16 +28,31 @@
 								<li><a class="gn-icon gn-icon-article" href="/postblog/">Post Blog</a></li>
 								<li><a class="gn-icon" href="/allblogs/"><i style="margin-left:20px;margin-right:20px;" class="fa fa-th"></i> All Blogs List</a></li>
 								<li><a class="gn-icon" href=""><i style="margin-left:20px;margin-right:20px;" class="fa fa-line-chart"></i>Analysis</a></li>
-							</ul>
 						</div><!-- /gn-scroller -->
 					</nav>
 				</li>
 				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Logout</span></a></li>
 			</ul>
-			<header>
-				<h2>Hi there,</h2>
-				<h1>Legaloids Admin Pannel</h1>	
-			</header> 
+			<div style="margin-left:400px;margin-top:100px;margin-right:50px;background-color:white;border-radius:15px;"class="w3-card-4">
+			<table class="w3-table-all w3-hoverable">
+				<tr class="w3-black">
+					<th>Blog Id</th>
+					<th>Blog Title</th>
+					<th>Blog Body</th>
+					<th>Blog Category</th>
+					<th>Blog Photo</th>
+				</tr>
+				<tr>
+					<td>B002</td>
+					<td>Crime</td>
+					<td>ABC</td>
+					<td>XYZ</td>
+					<td>vg</td>
+				</tr>
+
+				
+			</table>
+			</div>
 		</div><!-- /container -->
 		<script src="{% static 'admin/js/classie.js' %}"></script>
 		<script src="{% static 'admin/js/gnmenu.js' %}"></script>
