@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import *
 
 def about(request):
 	return render(request,'about.html',{})
@@ -18,5 +19,12 @@ def singleblog(request):
 	return render(request,'single-blog.html',{})
 def study(request):
 	return render(request,'study.html',{})
+def adminlogin(request):
+	return render(request,'adminlogin.html',{})
+@csrf_exempt
 def adminpannel(request):
-	return render(request,'adminpannel.html',{})
+	if request.method=="POST":
+		e=request.POST.get('email')
+		p=request.POST.get('pass')
+		if e=='admin@legaloids.com' and p=='1234':
+			return render(request,'adminpannel.html',{})
