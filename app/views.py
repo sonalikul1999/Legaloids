@@ -24,3 +24,5 @@ def postblog(request):
 	return render(request,'postblog.html',{})
 def allblogs(request):
 	return render(request,'allblogs.html',{})
+def analytics(request):
+	return render(request,'analytics.html',{})
