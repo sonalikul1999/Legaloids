@@ -33,7 +33,7 @@
 				</li>
 				<li><a class="codrops-icon codrops-icon-drop" href="#"><span>Logout</span></a></li>
 			</ul>
-			<div style="margin-left:400px;margin-top:100px;margin-right:50px;background-color:white;border-radius:15px;"class="w3-card-4">
+			<div style="margin-left:400px;margin-top:100px;margin-right:50px;background-color:white;border-radius:10px;overflow-x:auto;overflow-y:auto;height:400px;" class="w3-card-4">
 			<table class="w3-table-all w3-hoverable">
 				<tr class="w3-black">
 					<th>Blog Id</th>
@@ -53,8 +53,8 @@
 					<td>{{ x.Blog_Category|safe }}</td>
 					<td><img style="width:75;height:50px;" src="{{ x.Blog_Image.url|safe }}"></td>
 					<td>
-						<form>
-							<input type="hidden">
+						<form action="/delete/" method="POST">
+							<input type="hidden" name="blogid" value="{{ x.Blog_ID|safe }}">
 							<input type="submit" class="w3-button w3-red w3-hover-black" value="Delete">
 						</form>
 					</td>

@@ -105,6 +105,16 @@ def allblogs(request):
 			return redirect('/error/')
 	except:
 		return redirect('/error/')
+
+@csrf_exempt
+def deleteblog(request):
+	if request.method=="POST":
+		ID=request.POST.get('blogid')
+		obj=BlogData.objects.filter(Blog_ID=ID)
+		obj.delete()
+		return redirect('/allblogs/')
+	else:
+		return redirect('/error/')
 def analytics(request):
 	return render(request,'analytics.html',{})
 

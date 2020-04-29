@@ -24,6 +24,7 @@ urlpatterns = [
     path('error/',error),
     path('saveblog/',saveblog),
     path('sendquote/',sendquote),
+    path('delete/',deleteblog),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
