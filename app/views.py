@@ -81,6 +81,11 @@ def postblog(request):
 	except:
 		return redirect('/error/')
 def allblogs(request):
+
+	return render(request,'allblogs.html',{})
+def analytics(request):
+	return render(request,'analytics.html',{})
+
 	try:
 		if request.session['admin_id']=="admin@legaloids.com":
 			return render(request,'allblogs.html',{'data':BlogData.objects.all()})
