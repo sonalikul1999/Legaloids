@@ -40,15 +40,16 @@
 			  <h2>Post Blog</h2>
 			</div>
 
-			<form style="padding-right:20px;padding-left:20px;padding-bottom:20px;padding-top:20px;"class="w3-container">
-			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Title" name="title" type="text">
+			<form style="padding-right:20px;padding-left:20px;padding-bottom:20px;padding-top:20px;"class="w3-container" action="/saveblog/" method="POST" enctype="multipart/form-data">
+				<label style="margin-bottom:10px;font-size:20px;font-weight:bold;color:green;">{{ msg|safe }}</label>
+			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Title" name="title" type="text" required>
 
-			  <textarea style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Body" name="body" type="text"></textarea>
-			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Category" name="category" type="text">
-			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Photo" name="image" type="file">
+			  <textarea style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Body" name="body" type="text" required></textarea>
+			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Blog Category" name="category" type="text" required>
+			  <input style="margin-bottom:20px;" class="w3-input w3-border w3-light-grey" placeholder="Photo" name="image" type="file" accept="image/*" required>
 
 
-			  <button style="font-size:18px;border-radius:15px;padding:10px;" class="w3-black w3-hover-blue">Post Blog</button>
+			  <button style="font-size:18px;border-radius:15px;padding:10px;" class="w3-black w3-hover-blue" type="submit">Post Blog</button>
 			</form></div>
 		</div><!-- /container -->
 		<script src="{% static 'admin/js/classie.js' %}"></script>

@@ -37,18 +37,29 @@
 			<table class="w3-table-all w3-hoverable">
 				<tr class="w3-black">
 					<th>Blog Id</th>
+					<th>Blog Date</th>
 					<th>Blog Title</th>
 					<th>Blog Body</th>
 					<th>Blog Category</th>
 					<th>Blog Photo</th>
+					<th>Delete Blog</th>
 				</tr>
+				{% for x in data %}
 				<tr>
-					<td>B002</td>
-					<td>Crime</td>
-					<td>ABC</td>
-					<td>XYZ</td>
-					<td>vg</td>
+					<td>{{ x.Blog_ID|safe }}</td>
+					<td>{{ x.Blog_Date|safe }}</td>
+					<td>{{ x.Blog_Title|safe }}</td>
+					<td>{{ x.Blog_Body|safe }}</td>
+					<td>{{ x.Blog_Category|safe }}</td>
+					<td><img style="width:75;height:50px;" src="{{ x.Blog_Image.url|safe }}"></td>
+					<td>
+						<form>
+							<input type="hidden">
+							<input type="submit" class="w3-button w3-red w3-hover-black" value="Delete">
+						</form>
+					</td>
 				</tr>
+				{% endfor %}
 
 				
 			</table>
