@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import *
 from app.models import *
 from django.core.paginator import *
+from django.core.mail import EmailMessage
 
 def about(request):
 	return render(request,'about.html',{})
@@ -50,7 +51,23 @@ def contact(request):
 def elements(request):
 	return render(request,'elements.html',{})
 def index(request):
-	return render(request,'index.html',{})
+	d={}
+	lt=[]
+	count=0
+	obj=BlogData.objects.all()
+	for x in obj:
+		if count<4:
+			d={
+			'title':x.Blog_Title,
+			'date':x.Blog_Date,
+			'image':x.Blog_Image.url
+			}
+			lt.append(d)
+			count=count+1
+		else:
+			break
+	dic={'data':reversed(lt)}
+	return render(request,'index.html',dic)
 def services(request):
 	return render(request,'services.html',{})
 def singleblog(request):
@@ -81,8 +98,13 @@ def postblog(request):
 	except:
 		return redirect('/error/')
 def allblogs(request):
-
-	return render(request,'allblogs.html',{})
+	try:
+		if request.session['admin_id']=="admin@legaloids.com":
+			return render(request,'allblogs.html',{'data':BlogData.objects.all()})
+		else:
+			return redirect('/error/')
+	except:
+		return redirect('/error/')
 def analytics(request):
 	return render(request,'analytics.html',{})
 
@@ -118,3 +140,32 @@ def saveblog(request):
 		return render(request,'postblog.html',{'msg':'Blog Posted Successfully'})
 	else:
 		return redirect('/error/')
+@csrf_exempt
+def sendquote(request):
+	if request.method=='POST':
+		n=request.POST.get('name')
+		e=request.POST.get('email')
+		m=request.POST.get('msg')
+		msg='''Hi there!
+There is a new contact message from a customer,
+
+Name : '''+n+'''
+Email : '''+e+'''
+Message : '''+m+'''
+
+Thanks & Regards,
+Team Legaloids'''
+		sub='Legaloids - New Contact Message'
+		email=EmailMessage(sub,msg,to=['shreshtharnd20@gmail.com'])
+		email.send()
+		msg='''Hi '''+n+'''!
+We got your message our team will contact you soon.
+
+Keep in touch....!!!!
+
+Thanks & Regards,
+Team Legaloids'''
+		sub='Legaloids - Quote Request Receieved'
+		email=EmailMessage(sub,msg,to=[e])
+		email.send()
+		return redirect('/index/')
