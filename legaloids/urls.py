@@ -23,6 +23,7 @@ urlpatterns = [
     path('analytics/',analytics),
     path('error/',error),
     path('saveblog/',saveblog),
+    path('team/',team),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
