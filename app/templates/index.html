@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'w3.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -91,8 +92,8 @@
                                             <li><a class="active" href="/index/">Home</a></li>
                                             
                                             <li><a href="/services/">Services</a></li>
-                                            <li><a href="/study/">Blog</a></li>
-                                             <li><a href="/study/">About Us</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                             <li><a href="/about/">About Us</a></li>
                                             <li><a href="/contact/">Contact</a></li>
                                         </ul>
                                     </nav>
@@ -101,7 +102,7 @@
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a  href="#">Get a Quote</a>
+                                        <a  href="/contact/">Get a Quote</a>
                                     </div>
                                 </div>
                             </div>
@@ -393,42 +394,18 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="case_active owl-carousel">
+                                        
+                                        {% for x in data %}
                                         <div class="single_case">
                                                 <div class="case_thumb">
-                                                        <img src="{% static 'img/case/1.png' %}" alt="">
+                                                        <img src="{{ x.image|safe }}" alt="">
                                                     </div>
                                             <div class="case_heading">
-                                                    <span>Blog Category</span>
-                                                    <h3><a href="#">Blog Title 1</a></h3>
+                                                    <span>{{ x.date|safe }}</span>
+                                                    <h3><a href="#">{{ x.title|safe }}</a></h3>
                                             </div>
                                         </div>
-                                        <div class="single_case">
-                                                <div class="case_thumb">
-                                                        <img src="{% static 'img/case/2.png' %}" alt="">
-                                                    </div>
-                                            <div class="case_heading">
-                                                    <span>Blog Category</span>
-                                                    <h3><a href="#">Blog Title 2</a></h3>
-                                            </div>
-                                        </div>
-                                        <div class="single_case">
-                                                <div class="case_thumb">
-                                                        <img src="{% static 'img/case/3.png' %}" alt="">
-                                                    </div>
-                                            <div class="case_heading">
-                                                    <span>Blog Category</span>
-                                                    <h3><a href="#">Blog Title 3</a></h3>
-                                            </div>
-                                        </div>
-                                        <div class="single_case">
-                                                <div class="case_thumb">
-                                                        <img src="{% static 'img/case/1.png' %}" alt="">
-                                                    </div>
-                                            <div class="case_heading">
-                                                    <span>Finance Solution</span>
-                                                    <h3><a href="#">Consumer Products Consulting</a></h3>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                 </div>
                                 
                             </div>
@@ -436,7 +413,7 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="more_close_btn text-center">
-                                    <a href="#" class="boxed-btn3-line">More Cases</a>
+                                    <a href="/blog/" class="boxed-btn3-line">More Blogs</a>
                                 </div>
                             </div>
                         </div>
@@ -448,13 +425,29 @@
     <!-- accordion  -->
             <!-- accordion  -->
 
-    <div class="testimonial_area overlay ">
+    <div class="testimonial_area overlay" style="padding-top:50px;padding-bottom:50px;">
         <div class="container">
+            <div class="section_title text-center mb-40">
+                <h3 style="color:white;">Our Clients</h3>
+            </div>
             <div class="row">
-                <div class="col-xl-12">
-                    <div class="testmonial_active owl-carousel">
-                        <h1 style="color:white;">Advertisement Here</h1>
-                    </div>
+                <div class="column">
+                    <img style="width:170px;" src="{% static 'img/logo1.png' %}">
+                </div>
+                <div class="column">
+                    <img style="width:170px;margin-left:20px;" src="{% static 'img/logo3.png' %}">
+                </div>
+                <div class="column">
+                    <img style="width:170px;margin-left:20px;" src="{% static 'img/logo4.png' %}">
+                </div>
+                <div class="column">
+                    <img style="width:170px;margin-left:20px;" src="{% static 'img/logo5.png' %}">
+                </div>
+                <div class="column">
+                    <img style="width:170px;margin-left:20px;" src="{% static 'img/logo6.png' %}">
+                </div>
+                <div class="column">
+                    <img style="width:170px;margin-left:20px;" src="{% static 'img/logo7.png' %}">
                 </div>
             </div>
         </div>
@@ -568,11 +561,11 @@
                 <div class="col-xl-5 col-lg-6">
                     <div class="form_wrap">
                             <h3>Get Free Quote</h3>
-                            <form action="#">
-                                <input type="text" placeholder="Your Name" >
-                                <input type="email" placeholder="Email" >
-                                <textarea name="#" id="" cols="30" rows="10" placeholder="Message" ></textarea>
-                                <button class="boxed-btn3">Send</button>
+                            <form action="/sendquote/" method="POST">
+                                <input type="text" name="name" placeholder="Your Name" >
+                                <input type="email" name="email" placeholder="Email" >
+                                <textarea name="msg" placeholder="Message" ></textarea>
+                                <button type="submit" class="boxed-btn3">Send</button>
                             </form>
                     </div>
                 </div>
@@ -593,7 +586,7 @@
                     <div class="info_text text-center">
                         <h3>For Any Information Call Us</h3>
                         <p>Esteem spirit temper too say adieus who direct esteem.</p>
-                        <a class="boxed-btn3" href="#">0120 - 4157858
+                        <a class="boxed-btn3" href="/contact/">0120 - 4157858
 </a>
                     </div>
                 </div>
