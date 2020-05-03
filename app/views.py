@@ -3,6 +3,7 @@ from django.views.decorators.csrf import *
 from app.models import *
 from django.core.paginator import *
 from django.core.mail import EmailMessage
+from django.http import HttpResponse
 
 def about(request):
 	return render(request,'about.html',{})
@@ -56,17 +57,13 @@ def index(request):
 	count=0
 	obj=BlogData.objects.all()
 	for x in obj:
-		if count<4:
-			d={
-			'title':x.Blog_Title,
-			'date':x.Blog_Date,
-			'image':x.Blog_Image.url
-			}
-			lt.append(d)
-			count=count+1
-		else:
-			break
-	dic={'data':reversed(lt)}
+		d={
+		'title':x.Blog_Title,
+		'date':x.Blog_Date,
+		'image':x.Blog_Image.url
+		}
+		lt.append(d)
+	dic={'data':list(reversed(lt[0:3]))}
 	return render(request,'index.html',dic)
 def services(request):
 	return render(request,'services.html',{})
@@ -86,6 +83,26 @@ def adminpannel(request):
 			return render(request,'adminpannel.html',{})
 		else:
 			return redirect('/error/')
+	else:
+		return redirect('/error/')
+
+def adminhome(request):
+	try:
+		if request.session['admin_id']=="admin@legaloids.com":
+			return render(request,'adminpannel.html',{})
+		else:
+			return redirect('/error/')
+	except:
+		return redirect('/error/')
+
+def adminlogout(request):
+	try:
+		del request.session['admin_id']
+		request.session.flush()
+		return redirect('/adminlogin/')
+	except:
+		return redirect('/error/')
+
 def error(request):
 	return render(request,'error.html',{})
 @csrf_exempt
@@ -179,3 +196,13 @@ Team Legaloids'''
 		email=EmailMessage(sub,msg,to=[e])
 		email.send()
 		return redirect('/index/')
+import csv
+def downloaddata(request):
+	response = HttpResponse()
+	response['Content-Disposition'] = 'attachment;filename=BlogData.csv'
+	writer = csv.writer(response)
+	writer.writerow(["Blog_Date", "Blog_ID", "Blog_Title", "Blog_Category", "Blog_Body", "Blog_Image"])
+	obj1=BlogData.objects.all()
+	for x in obj1:
+		writer.writerow([x.Blog_Date, x.Blog_ID, x.Blog_Title, x.Blog_Category, x.Blog_Body, x.Blog_Image])
+	return response

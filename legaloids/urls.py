@@ -25,6 +25,9 @@ urlpatterns = [
     path('saveblog/',saveblog),
     path('sendquote/',sendquote),
     path('delete/',deleteblog),
+    path('adminhome/',adminhome),
+    path('adminlogout/',adminlogout),
+    path('downloaddata/',downloaddata),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
