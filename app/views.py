@@ -150,7 +150,7 @@ def saveblog(request):
 		return render(request,'postblog.html',{'msg':'Blog Posted Successfully'})
 	else:
 		return redirect('/error/')
-<<<<<<< HEAD
+
 def team(request):
 	return render(request,'team.html',{})
 
