@@ -5,6 +5,8 @@ from django.core.paginator import *
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 
+def preloader(request):
+	return render(request,'preloader.html',{})
 def about(request):
 	return render(request,'about.html',{})
 def blog(request):
