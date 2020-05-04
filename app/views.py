@@ -210,3 +210,5 @@ def downloaddata(request):
 	for x in obj1:
 		writer.writerow([x.Blog_Date, x.Blog_ID, x.Blog_Title, x.Blog_Category, x.Blog_Body, x.Blog_Image])
 	return response
+def industries(request):
+	return render(request,'industries.html',{})

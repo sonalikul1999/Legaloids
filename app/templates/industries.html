@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Legaloids - Blogs</title>
+    <title>Legaloids - Industries</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -91,12 +91,12 @@
                                             <li><a href="/index/">Home</a></li>
                                             
                                             <li><a href="/services/">Services</a></li>
-                                            <li><a class="active" href="/blog/">Blog</a></li>
-                                            <li><a href="/industries/">Industries</a></li>
-
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a class="active"href="/industries/">Industries</a></li>
                                             <li><a href="/about/">About Us</a></li>
                                             <li><a href="/team/">Our Team</a></li>
-                                                                                    </ul>
+                                            
+                                        </ul>
                                     </nav>
                                 </div>
                             </div>
@@ -117,102 +117,199 @@
             </div>
         </div>
     </header>
-        <!-- header-end -->
+    <!-- header-end -->
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area" style="background-image:url({% static 'img/Penn_Home2_30Sept.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="bradcam_text">
+                            <h3>Industries</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ bradcam_area  -->
+
+    <!-- about_info_area start  -->
+    <div class="about_info_area plus_padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about_text">
+                        <h3>About Our Firm</h3>
+                        <p>LEGALOIDS Law Offices values the trust of its clients and works hard to provide solid and effective representation to meet their diverse legal needs. With a foundation built on longstanding relationships with our clients, the firm offers personalized service, accessibility, and attention to detail to consistently achieve favorable outcomes.
+
+LEGALOIDS Law Offices, is a full service corporate and litigation law firm with its office in New Delhi and associate offices in Noida, Pune and Mumbai. The firm delivers timely and cost-effective solutions in contracts and transactions with an emphasis on thorough investigation and meticulous planning. Our aim is to ensure that client matters can be concluded without litigation. Although, we will aggressively defend the rights and interests of our client in litigation if the incidental need arises.</p>
+                           
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about_thumb">
+                        <img src="{% static 'img/service/about.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /about_info_area end  -->
+
+    <!-- counter_area  -->
+    <div class="counter_area counter_bg_1 overlay_03">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="single_counter text-center">
+                        <div class="counter_icon">
+                            <img src="{% static 'img/svg_icon/group.svg' %}" alt="">
+                        </div>
+                        <h3> <span class="counter">200</span> <span> +</span> </h3>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="single_counter text-center">
+                        <div class="counter_icon">
+                            <img src="{% static 'img/svg_icon/cart.svg' %}" alt="">
+                        </div>
+                        <h3> <span class="counter">97</span> <span>%</span> </h3>
+                        <p>Business Success</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="single_counter text-center">
+                        <div class="counter_icon">
+                            <img src="{% static 'img/svg_icon/heart.svg' %}" alt="">
+                        </div>
+                        <h3> <span class="counter">5628</span></h3>
+                        <p>Happy Client</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="single_counter text-center">
+                        <div class="counter_icon">
+                            <img src="{% static 'img/svg_icon/respect.svg' %}" alt="">
+                        </div>
+                        <h3> <span class="counter">5637</span> </h3>
+                        <p>Business Done</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /counter_area  -->
     
-        <!-- bradcam_area  -->
-        <div class="bradcam_area" style="background-image:url({% static 'img/writing.jpg' %})">
-                <div class="container">
+    <!-- service_area_start -->
+    
+        <!-- service_area_end -->
+
+    <!-- team_area  -->
+    <div class="team_area minus_padding">
+            <div class="container">
+                <div class="border_bottom">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="bradcam_text">
-                                <h3>Blog</h3>
+                            <div class="section_title mb-40 text-center">
+                                <h3>
+                                        Expert Team
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_team">
+                                <div class="team_thumb">
+                                    <img src="{% static 'img/team/3.png' %}" alt="">
+                                </div>
+                                <div class="team_info text-center">
+                                    <h3>Team Member 1</h3>
+                                    <p>Member Post 1</p>
+                                    <div class="social_link">
+                                        <ul>
+                                            <li><a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_team">
+                                <div class="team_thumb">
+                                    <img src="{% static 'img/team/2.png' %}" alt="">
+                                </div>
+                                <div class="team_info text-center">
+                                    <h3>Team Member 2</h3>
+                                    <p>Member Post 2</p>
+                                    <div class="social_link">
+                                        <ul>
+                                            <li><a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_team">
+                                <div class="team_thumb">
+                                    <img src="{% static 'img/team/1.png' %}" alt="">
+                                </div>
+                                <div class="team_info text-center">
+                                    <h3>Team Member 3</h3>
+                                    <p>Member Post 3</p>
+                                    <div class="social_link">
+                                        <ul> 
+                                            <li><a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--/ bradcam_area  -->
-
-
-    <!--================Blog Area =================-->
-    <section class="blog_area" style="padding-top:50px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
-                        {% for x in data %}
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="{{ x.Blog_Image.url|safe }}" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>{{ x.Blog_Date|safe }}</h3>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>{{ x.Blog_Title|safe }}</h2>
-                                </a>
-                                <p>{{ x.Blog_Body|safe }}</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> By Admin</a></li>
-                                </ul>
-                            </div>
-                        </article>
-                        {% endfor %}
-                        <center>
-                            <div class="w3-bar">
-                            {% if data.has_other_pages %}
-                                {% if data.has_previous %}
-                                <a href="/blog/?page={{ data.previous_page_number }}" class="w3-button w3-hover-black">&laquo;</a>
-                                {% else %}
-                                <span>&laquo;</span>
-                              {% endif %}
-                              {% for i in data.paginator.page_range %}
-                                {% if data.number == i %}
-                                  <a class="w3-button w3-blue w3-hover-black">{{ i }}</a>
-                                {% else %}
-                                  <a href="/blog/?page={{ i }}" class="w3-button w3-hover-black">{{ i }}</a>
-                                {% endif %}
-                              {% endfor %}
-                              {% if data.has_next %}
-                                <a href="/blog/?page={{ data.next_page_number }}" class="w3-button w3-hover-black">&raquo;</a>
-                              {% else %}
-                                <span>&raquo;</span>
-                              {% endif %}
-                            </ul>
-                          {% endif %}
-                          </div>
-                        </center>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog_right_sidebar">
-                        
-                        <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Recent Post</h3>
-                            
-                            {% for x in rdata %}
-                            <div class="media post_item">
-                                <img style="width:120px;height:100px;" src="{{ x.image|safe }}" alt="post">
-                                <div class="media-body">
-                                    <a href="">
-                                        <h3>{{ x.title|safe }}</h3>
-                                    </a>
-                                    <p>{{ x.date|safe }}</p>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            
-                        </aside>
-                        
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-    <!--================Blog Area =================-->
+    <!-- /team_area  -->
+
+    
+    <!-- Information_area  -->
+    
+    <!-- /Information_area  end -->
 
     <!-- footer start -->
 <footer class="footer">
@@ -309,7 +406,9 @@
             </div>
         </div>
     </footer>
-        <!--/ footer end  -->
+    <!--/ footer end  -->
+
+    <!-- link that opens popup -->
 
 
     <!-- JS here -->
@@ -331,30 +430,15 @@
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'js/plugins.js' %}"></script>
     <script src="{% static 'js/gijgo.min.js' %}"></script>
-
+    <script src="{% static 'js/slick.min.js' %}"></script>
     <!--contact js-->
     <script src="{% static 'js/contact.js' %}"></script>
     <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-    <script src="{% static 'js/jquery.form.js' %}"></script>
     <script src="{% static 'js/jquery.form.js' %}"></script>
     <script src="{% static 'js/jquery.validate.min.js' %}"></script>
     <script src="{% static 'js/mail-script.js' %}"></script>
 
     <script src="{% static 'js/main.js' %}"></script>
-    <script>
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
-        });
-        $('#datepicker2').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
-
-        });
-    </script>
 </body>
+
 </html>
