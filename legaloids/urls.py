@@ -23,6 +23,7 @@ urlpatterns = [
     path('analytics/',analytics),
     path('error/',error),
     path('saveblog/',saveblog),
+    path('team/',team),
     path('sendquote/',sendquote),
     path('delete/',deleteblog),
     path('adminhome/',adminhome),
