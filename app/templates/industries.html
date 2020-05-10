@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -26,13 +26,12 @@
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'w3.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
     <!-- header-start -->
     <header>
@@ -92,11 +91,11 @@
                                             
                                             <li><a href="/services/">Services</a></li>
                                             <li><a href="/blog/">Blog</a></li>
-                                            <li><a class="active"href="/industries/">Industries</a></li>
+                                            <li><a class="active" href="/industries/">Industries</a></li>
+
                                             <li><a href="/about/">About Us</a></li>
                                             <li><a href="/team/">Our Team</a></li>
-                                            
-                                        </ul>
+                                                                                    </ul>
                                     </nav>
                                 </div>
                             </div>
@@ -117,6 +116,7 @@
             </div>
         </div>
     </header>
+
     <!-- header-end -->
 
     <!-- bradcam_area  -->
@@ -133,183 +133,122 @@
         </div>
         <!--/ bradcam_area  -->
 
-    <!-- about_info_area start  -->
-    <div class="about_info_area plus_padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="about_text">
-                        <h3>About Our Firm</h3>
-                        <p>LEGALOIDS Law Offices values the trust of its clients and works hard to provide solid and effective representation to meet their diverse legal needs. With a foundation built on longstanding relationships with our clients, the firm offers personalized service, accessibility, and attention to detail to consistently achieve favorable outcomes.
-
-LEGALOIDS Law Offices, is a full service corporate and litigation law firm with its office in New Delhi and associate offices in Noida, Pune and Mumbai. The firm delivers timely and cost-effective solutions in contracts and transactions with an emphasis on thorough investigation and meticulous planning. Our aim is to ensure that client matters can be concluded without litigation. Although, we will aggressively defend the rights and interests of our client in litigation if the incidental need arises.</p>
-                           
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="about_thumb">
-                        <img src="{% static 'img/service/about.png' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /about_info_area end  -->
-
-    <!-- counter_area  -->
-    <div class="counter_area counter_bg_1 overlay_03">
+    <!-- service_area_start -->
+    <div class="service_area">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="single_counter text-center">
-                        <div class="counter_icon">
-                            <img src="{% static 'img/svg_icon/group.svg' %}" alt="">
-                        </div>
-                        <h3> <span class="counter">200</span> <span> +</span> </h3>
-                        <p>Team Members</p>
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-50">
+                        <h3>We Deals In</h3>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="single_counter text-center">
-                        <div class="counter_icon">
-                            <img src="{% static 'img/svg_icon/cart.svg' %}" alt="">
-                        </div>
-                        <h3> <span class="counter">97</span> <span>%</span> </h3>
-                        <p>Business Success</p>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/photo-1523676060187-f55189a71f5e.jpg' %}" alt="">
+                
+                        <h3>Automotive
+                        </h3>
+                        <p>The automotive industry comprises a wide range of companies and organizations involved in the design, development, manufacturing, marketing, and selling of motor vehicles.</p>
+                
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="single_counter text-center">
-                        <div class="counter_icon">
-                            <img src="{% static 'img/svg_icon/heart.svg' %}" alt="">
-                        </div>
-                        <h3> <span class="counter">5628</span></h3>
-                        <p>Happy Client</p>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/banking.jpg' %}" alt="">                        
+                        <h3>Banking
+                        </h3>
+                        <p>Banks act as payment agents by conducting checking or current accounts for customers, paying cheques drawn by customers in the bank, and collecting cheques deposited to customers.  </p>
+                        
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="single_counter text-center">
-                        <div class="counter_icon">
-                            <img src="{% static 'img/svg_icon/respect.svg' %}" alt="">
-                        </div>
-                        <h3> <span class="counter">5637</span> </h3>
-                        <p>Business Done</p>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/solarfarm_mvtstockshot_sstock_1.jpg' %}" alt="">
+                        
+                        <h3>Energy & Utilities
+                        </h3>
+                        <p>Banks act as payment agents by conducting checking or current accounts for customers, paying cheques drawn by customers in the bank, and collecting cheques deposited to customers.</p>
+                    
                     </div>
                 </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/cloud-computing-fintech-revolution.png' %}" alt="">                       
+                        <h3>Fintech
+                        </h3>
+                        <p>Fintech is the term used to refer to innovations in the financial and technology crossover space, and typically refers to companies or services that use technology to provide financial services.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/IMG_6973.jpg' %}" alt="">
+                        <h3>HealthCare
+                        </h3>
+                        <p>Health care, health-care, or healthcare is the maintenance or improvement of health via the prevention, diagnosis, treatment, recovery, or cure of disease, illness, injury, and other physical.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/97423337.jpg' %}" alt="">                      
+                        <h3>Industrials
+                        </h3>
+                        <p>DescriptionAn industry is a sector that produces goods or related services within an economy. The major source of revenue of a group or company is an indicator of what industry it should be classified in.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/header_transport-infrastructure.jpg' %}" alt="">                        
+                        <h3>Infrastructure & Transport
+
+                        </h3>
+                        <p>Transport infrastructure consists of the fixed installations, including roads, railways, airways, waterways, canals and pipelines and terminals such as airports, railway stations, bus stations, warehouses.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                        
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/robot-wallpaper.jpg' %}" alt="">
+                        
+                        <h3>Robotics
+
+                        </h3>
+                        <p>Robotics is an interdisciplinary research area at the interface of computer science and engineering. Robotics involves design, construction, operation, and use of robots. The goal of robotics is to design. </p>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service text-center">
+                    
+                            <img style="width:250px;height:175px;border-style:solid;border-weight:5px;border-color:white;box-shadow:2px 2px 5px 5px #dbd7ca;"src="{% static 'img/Telcos-1.jpg' %}" alt="">
+                        
+                        <h3>Telecoms
+
+                        </h3>
+                        <p>Telecommunication is the exchange of signs, signals, messages, words, writings, images and sounds or information of any nature by wire, radio, optical or other electromagnetic systems.
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
-    <!-- /counter_area  -->
-    
-    <!-- service_area_start -->
-    
-        <!-- service_area_end -->
+    <!-- service_area_end -->
 
-    <!-- team_area  -->
-    <div class="team_area minus_padding">
-            <div class="container">
-                <div class="border_bottom">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="section_title mb-40 text-center">
-                                <h3>
-                                        Expert Team
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single_team">
-                                <div class="team_thumb">
-                                    <img src="{% static 'img/team/3.png' %}" alt="">
-                                </div>
-                                <div class="team_info text-center">
-                                    <h3>Team Member 1</h3>
-                                    <p>Member Post 1</p>
-                                    <div class="social_link">
-                                        <ul>
-                                            <li><a href="#">
-                                                    <i class="fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="#">
-                                                    <i class="fa fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="#">
-                                                    <i class="fa fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single_team">
-                                <div class="team_thumb">
-                                    <img src="{% static 'img/team/2.png' %}" alt="">
-                                </div>
-                                <div class="team_info text-center">
-                                    <h3>Team Member 2</h3>
-                                    <p>Member Post 2</p>
-                                    <div class="social_link">
-                                        <ul>
-                                            <li><a href="#">
-                                                    <i class="fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="#">
-                                                    <i class="fa fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="#">
-                                                    <i class="fa fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single_team">
-                                <div class="team_thumb">
-                                    <img src="{% static 'img/team/1.png' %}" alt="">
-                                </div>
-                                <div class="team_info text-center">
-                                    <h3>Team Member 3</h3>
-                                    <p>Member Post 3</p>
-                                    <div class="social_link">
-                                        <ul> 
-                                            <li><a href="#">
-                                                    <i class="fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="#">
-                                                    <i class="fa fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li><a href="#">
-                                                    <i class="fa fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- /team_area  -->
-
-    
-    <!-- Information_area  -->
-    
-    <!-- /Information_area  end -->
+        <!-- Information_area  -->
+        <!-- /Information_area  end -->
 
     <!-- footer start -->
 <footer class="footer">
@@ -438,6 +377,7 @@ LEGALOIDS Law Offices, is a full service corporate and litigation law firm with 
     <script src="{% static 'js/jquery.validate.min.js' %}"></script>
     <script src="{% static 'js/mail-script.js' %}"></script>
 
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 
