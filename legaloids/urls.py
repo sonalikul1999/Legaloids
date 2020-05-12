@@ -31,6 +31,7 @@ urlpatterns = [
     path('adminlogout/',adminlogout),
     path('downloaddata/',downloaddata),
     path('industries/',industries),
+    path('careers/',careers),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

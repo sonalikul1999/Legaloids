@@ -214,3 +214,5 @@ def downloaddata(request):
 	return response
 def industries(request):
 	return render(request,'industries.html',{})
+def careers(request):
+	return render(request,'careers.html',{})
