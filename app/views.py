@@ -189,7 +189,7 @@ Message : '''+m+'''
 Thanks & Regards,
 Team Legaloids'''
 		sub='Legaloids - New Contact Message'
-		email=EmailMessage(sub,msg,to=['shreshtharnd20@gmail.com'])
+		email=EmailMessage(sub,msg,to=['admin@legaloids.com'])
 		email.send()
 		msg='''Hi '''+n+'''!
 We got your message our team will contact you soon.
