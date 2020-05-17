@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -87,21 +87,24 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a class="active" href="/index/">Home</a></li>
+                                            <li><a  href="/index/">Home</a></li>
                                             
-                                            <li><a href="/services/">Services</a></li>
-                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a class="active"href="/services/">Services</a></li>
                                             <li><a href="/industries/">Industries</a></li>
-
-                                            <li><a href="/about/">About Us</a></li>
                                             <li><a href="/team/">Our Team</a></li>
+                                            <li><a href="/careers/">Work With Us</a></li>
+
+                                            <li><a href="/blog/">Blog</a></li>
+                                            
+                                            
+                                            
                                                                                 </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="Appointment">
-                                    <div class="book_btn d-none d-lg-block">
+                                    <div style="border-color:white;border-radius:50px;border-style:solid;border-width:2px;color:white;"class="w3-button w3-hover-blue">
                                         <a  href="/contact/">Contact Us</a>
                                     </div>
                                 </div>

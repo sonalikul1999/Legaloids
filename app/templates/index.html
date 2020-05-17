@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -32,6 +32,41 @@
 </head>
 
 <body>
+    <div id="id01" style="display:block;z-index:10;padding:50px;"class="w3-modal">
+  <div class="w3-modal-content">
+
+    <header style="padding:20px;"class="w3-container w3-blue text-center">
+            <h2 style="color:white;">Disclaimer</h2>
+    </header>
+
+    <div style="padding:20px;font-size:12px;"class="w3-container">
+      <p style="font-size:13px;">Due to the Bar Council of India regulations, Indian law firms are not allowed to advertise or solicit work. The access to our website and virtual office can be provided only on your request. For Access to our website and virtual office you will be required to register yourself with us by providing your email id and clicking on the I Agree Button. By registering yourself and clicking at “I Agree” button, you hereby acknowledge the following:
+    </p>
+    <ol>
+        <li>That you have requested for the access to the website and our virtual office, out of your own violations, to know more about the firm and access information provided therein.
+        </li><br>
+        <li>There has been no advertisement, solicitation or invitation or inducement of any sort whatsoever from us or any member of the firm for soliciting work through this website.
+        </li><br>
+        <li>You wish to gain more information about the firm for your own information and use.
+        </li><br>
+        <li>The information about the firm is provided to the user i.e. you the registrant, for your own information and use. Any information obtained or materials down loaded from this website is completely at user’s volition and any transmission, receipt or use of this website would not create any binding professional relationship.
+        </li><br>
+        <li>The firm is not liable for any action taken by the user relying on the material/ information provided under this website. In cases, where the user has any legal issue, he/she in all cases must seek independent legal advice.
+        </li>
+    </ol>
+      <p style="font-size:13px;">You hereby agree to the Privacy Policy of the firm.
+If you understand and agree to the above please click I Agree button. On clicking I Agree button, at the discretion of the firm, you may access the firm’s website.
+
+    </p>
+    <div class="text-center">
+    <span onclick="document.getElementById('id01').style.display='none'" style="font-size:18px;margin-top:20px;border-radius:20px;"class="w3-button w3-blue w3-hover-black text-center">I Agree</span>
+    </div>
+    </div>
+
+    
+  </div>
+</div>
+
     
     <header>
         <div class="header-area ">
@@ -89,18 +124,21 @@
                                             <li><a class="active" href="/index/">Home</a></li>
                                             
                                             <li><a href="/services/">Services</a></li>
-                                            <li><a href="/blog/">Blog</a></li>
                                             <li><a href="/industries/">Industries</a></li>
-
-                                            <li><a href="/about/">About Us</a></li>
                                             <li><a href="/team/">Our Team</a></li>
+                                            <li><a href="/careers/">Work With Us</a></li>
+
+                                            <li><a href="/blog/">Blog</a></li>
+                                            
+                                            
+                                            
                                                                                 </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="Appointment">
-                                    <div class="book_btn d-none d-lg-block">
+                                    <div style="border-color:white;border-radius:50px;border-style:solid;border-width:2px;color:white;"class="w3-button w3-hover-blue">
                                         <a  href="/contact/">Contact Us</a>
                                     </div>
                                 </div>
@@ -129,7 +167,7 @@
                                         BUSINESS LAW
                                 </h3>
                                 <div class="video_service_btn">
-                                    <a href="#" class="boxed-btn3">Our Services</a>
+                                    <a href="/blog/" class="boxed-btn3">Read Blogs</a>
                                 </div>
                             </div>
                         </div>
@@ -145,7 +183,7 @@
                                     WITH A HUMAN TOUCH
                                         </h3>
                                 <div class="video_service_btn">
-                                    <a href="#" class="boxed-btn3">Our Services</a>
+                                    <a href="/blog/" class="boxed-btn3">Read Blogs</a>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +198,7 @@
                                 <h3>BUSINESS PEOPLE <br>
                                         BUSINESS LAW</h3>
                                 <div class="video_service_btn">
-                                    <a href="#" class="boxed-btn3">Our Services</a>
+                                    <a href="/blog/" class="boxed-btn3">Read Blogs</a>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +213,7 @@
                                 <h3>A LARGE FIRM <br>
                                        WITH A HUMAN TOUCH </h3>
                                 <div class="video_service_btn">
-                                    <a href="#" class="boxed-btn3">Our Services</a>
+                                    <a href="/blog/" class="boxed-btn3">Read Blogs</a>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +234,6 @@
                         <h3>About Our Firm</h3>
                         <p>LEGALOIDS Law Offices values the trust of its clients and works hard to provide solid and effective representation to meet their diverse legal needs. With a foundation built on longstanding relationships with our clients, the firm offers personalized service, accessibility, and attention to detail to consistently achieve favorable outcomes.
                         LEGALOIDS Law Offices, is a full service corporate and litigation law firm with its office in New Delhi and associate offices in Noida, Pune and Mumbai. The firm delivers timely and cost-effective solutions in contracts and transactions with an emphasis on thorough investigation and meticulous planning. Our aim is to ensure that client matters can be concluded without litigation. Although, we will aggressively defend the rights and interests of our client in litigation if the incidental need arises.</p>
-                        <a href="/about/" class="boxed-btn3">About Us</a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
@@ -364,28 +401,7 @@
     </div>
 
     
-    <div class="contact_form_quote">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="form_wrap">
-                            <h3>Get Free Quote</h3>
-                            <form action="/sendquote/" method="POST">
-                                <input type="text" name="name" placeholder="Your Name" >
-                                <input type="email" name="email" placeholder="Email" >
-                                <textarea name="msg" placeholder="Message" ></textarea>
-                                <button type="submit" class="boxed-btn3">Send</button>
-                            </form>
-                    </div>
-                </div>
-                <div class="col-xl-6 offset-xl-1 col-lg-6">
-                    <div class="contact_thumb">
-                        <img src="{% static 'img/banner/contact_thumb.png' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Information_area  -->
     <div class="Information_area overlay">
