@@ -80,7 +80,7 @@ def adminpannel(request):
 	if request.method=="POST":
 		e=request.POST.get('email')
 		p=request.POST.get('pass')
-		if e=='admin@legaloids.com' and p=='1234':
+		if e=='admin@legaloids.com' and p=='legaloids@8881668058':
 			request.session['admin_id'] = e
 			return render(request,'adminpannel.html',{})
 		else:
